@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 数组中的every方法
+    
+    
+        判断 每一项 是否 满足 判断条件， 都满足 返回 true ， 否则 返回 false。
+    
+    -->
+
+
+    <script>
+        const arr = [
+      { id: 1, name: '西瓜', state: true },
+      { id: 2, name: '榴莲', state: false },
+      { id: 3, name: '草莓', state: true },
+    ]
+
+
+        // 判断 每个水果 是否 都被选中了(status = true) 
+        const chooseStatus = arr.every( item => item.state == true )
+        console.log(chooseStatus)
+    </script>
+</body>
+</html>

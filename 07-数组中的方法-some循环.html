@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 购物车案例
+    
+
+        会使用到一系列数组的方法。 
+        先复习一下数组的some方法
+    
+        
+    -->
+
+    <script>
+        const arr = ['小红', '你大红', '苏大强', '宝']
+
+        // 找到苏大强对应的索引，用forEach方法，注意cb函数可以接收两个参数，(item, index)--- 缺点： 必须循环完所有的元素， 比较耗时间。中途使用return无效
+        // arr.forEach( (item, index) => {
+        //     if (item == '苏大强') {
+        //         console.log(index)
+        //     }
+        // })
+
+        // some方法-- 适合找元素的索引 some表示 某一项-- 在找到对应的项之后，可以通过 return true 固定的语法，来终止 some 循环
+        arr.some( (item, index) => {
+            console.log('OK')// 只执行了三次， 说明 return true 生效
+            if (item == '苏大强') {
+                console.log(index)
+                // 在找到对应的项之后，可以通过 return true 固定的语法，来终止 some 循环
+                return true // return true 写在 判断 里
+            }
+
+        })
+
+
+
+        // const numArr = [1, 2, 5, 6, 9, 11]
+        // numArr.some( (item,index) => {
+        //     if (item == 6) {
+        //         console.log(index)
+        //         return true
+        //     }
+        // } )
+
+    </script>
+</body>
+</html>

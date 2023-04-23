@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- reduce 的 简化写法： 实质是 箭头函数的 简化写法： 省略 return -->
+
+    <script>
+        const arr = [1, 4, 6, 9, 10]
+        // 累加
+        let cnt =  arr.reduce( (num, item) => num += item, 0 )
+        console.log(cnt)
+    </script>
+</body>
+</html>

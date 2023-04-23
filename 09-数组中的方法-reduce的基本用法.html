@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // price 单价， count 数目
+         const arr = [
+      { id: 1, name: '西瓜', state: true, price: 10, count: 1 },
+      { id: 2, name: '榴莲', state: false, price: 80, count: 2 },
+      { id: 3, name: '草莓', state: true, price: 20, count: 3 },
+    ]
+        // 需求：把数组中，已勾选的水果，总价累加起来！
+        // let arrStateTrue =  arr.filter( (item,index) => {
+        //     return item.state == true// 注意 要加 return ， 才能放到 新数组 中 
+        // } )
+        // // 累加总价
+        // let sumPrice = 0
+        // arrStateTrue.forEach( (item,index) => {
+        //     sumPrice += item.price * item.count
+        // } )
+        // console.log(sumPrice)
+
+
+
+            // 简略写法
+        // let sumPri = 0
+        // arr.filter( item => item.state == true ).forEach( item => {
+        //     sumPri += item.price * item.count
+        // } )
+        // console.log(sumPri)
+
+
+
+
+        // 使用 reduce方法， 相当于是一个累加器， 把每一次循环的结果加起来
+        // arr.filter(item => item.state).reduce((累加的结果, 当前循环项item) => { return }, 初始值)
+        // let sumPrice =  arr.filter(item => item.state == true).reduce( (price, item) => {
+        //     return price += item.count * item.price//return 给 price
+        // }, 0)
+        // console.log(sumPrice)
+
+
+
+        const arr2 = [1, 2, 5, 4]
+        // // 用reduce方法求积
+        // let mulRet =  arr2.reduce( (ret, item) => {
+        //     return ret = ret * item 
+        // }, 1 )
+        // console.log(mulRet)// 40
+
+        // 用reduce方法求最大值
+        // let max = arr2.reduce( (num, item) => {
+        //     return num =  num > item ? num : item
+        // }, arr2[0] )
+        // console.log(max)// 5
+
+
+
+
+        // 用reduce方法求最小值
+        let min =  arr2.reduce( (num, item) => {
+            return num = num < item ? num : item 
+        } , arr2[0])
+        console.log(min)// 1 
+
+        // 用every方法 判断每一项是否都是偶数
+        console.log(arr2.every( item => {
+            return item % 2 == 0
+        })) // false
+    </script>
+</body>
+</html> 
